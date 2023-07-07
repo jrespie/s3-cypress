@@ -30,4 +30,5 @@ jobs:
               if: failure()
             - name: Upload mochawesome report
               run: aws configure list
+              if: always()
               
