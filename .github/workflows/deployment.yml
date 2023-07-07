@@ -24,8 +24,8 @@ jobs:
                 spec: cypress/e2e/**/*.cy.js
             - name: Merge cypress reports into one file
               run: |
-                mochawesome-merge cypress/results/*.json -o cypress/results/cypress-report.json
-                marge cypress/results/cypress-report.json
+                npx mochawesome-merge cypress/results/*.json -o cypress/results/cypress-report.json
+                npx marge cypress/results/cypress-report.json
               if: always()
             - name: Upload screenshots from failed tests
               uses: actions/upload-artifact@v3
