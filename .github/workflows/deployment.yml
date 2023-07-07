@@ -28,3 +28,6 @@ jobs:
                 name: cypress-screenshots
                 path: cypress/screenshots/**/*
               if: failure()
+            - name: Upload mochawesome report
+              run: aws configure list
+              
