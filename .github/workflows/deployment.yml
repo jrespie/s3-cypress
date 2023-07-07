@@ -22,3 +22,8 @@ jobs:
               uses: cypress-io/github-action@v4.1.1
               with:
                 spec: cypress/e2e/**/*.cy.js
+            - name: Upload screenshots from failed tests
+              uses: actions/upload-artifact@v3
+              with:
+                name: cypress-screenshots
+                path: cypress/screenshots/**/*
