@@ -2,7 +2,7 @@ name: Deployment
 on:
     push:
         branches:
-            - master
+            - main
 jobs:
     echo-some-text:
         name: Echo some text
