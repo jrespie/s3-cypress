@@ -1,0 +1,11 @@
+name: Deployment
+on:
+    push:
+        branches:
+            - master
+jobs:
+    echo-some-text:
+        name: Echo some text
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "hey there"
