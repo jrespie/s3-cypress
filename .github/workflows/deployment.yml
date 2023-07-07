@@ -21,4 +21,4 @@ jobs:
             - name: Cypress run
               uses: cypress-io/github-action@v4.1.1
               with:
-                spec: cypress/e2e/**/*.cy.ts
+                spec: cypress/e2e/**/*.cy.js
