@@ -19,7 +19,7 @@ jobs:
     cypress-run:
         name: Cypress Tests
         needs:
-            - echo-some-text
+            - list-files
         continue-on-error: true
         runs-on: ubuntu-latest
         steps:
@@ -27,4 +27,4 @@ jobs:
               uses: cypress-io/github-action@v4.1.1
               with:
                 spec: cypress/e2e/**/*.cy.ts
-                working-directory: /
+                working-directory: ../
