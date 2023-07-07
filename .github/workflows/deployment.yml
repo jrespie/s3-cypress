@@ -9,3 +9,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "hey there"
+    cypress-run:
+        name: Cypress Tests
+        needs:
+            - echo-some-text
+        continue-on-error: true
+        runs-on: ubuntu-latest
+        steps:
+            - name: Cypress run
+              uses: cypress-io/github-action@v4.1.1
+              with:
+                spec: cypress/e2e/**/*.cy.ts
