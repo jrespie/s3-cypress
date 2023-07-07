@@ -1,5 +1,5 @@
 describe('template spec', () => {
-  it('passes', () => {
+  it('Headline should say "Kitchen Stink"', () => {
     cy.visit('https://example.cypress.io')
     cy.get('h1').should('contain','Kitchen Stink')
   })
